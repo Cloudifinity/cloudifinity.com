@@ -186,6 +186,27 @@ button:focus-visible,
 }
 
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+.hero__actions--center { justify-content: center; }
+
+/* Compliance chips under the hero CTA */
+.hero__chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.8rem 0 0;
+  padding: 0;
+}
+.chip {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--off-white);
+  padding: 0.32rem 0.85rem;
+  border: 1px solid rgba(144, 173, 187, 0.55);
+  border-radius: 999px;
+  background: rgba(144, 173, 187, 0.12);
+}
 
 /* --------------------------------------------------------------------------
    Buttons
@@ -309,11 +330,90 @@ button:focus-visible,
 .card__title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem; }
 .card__body { color: var(--ink-soft); font-size: 1rem; margin: 0; }
 
+/* Recommended tier: same accent treatment as the feature card */
+.card--recommended { border-top: 4px solid var(--blue-grey-deep); }
+
+/* Managed tier checklists */
+.tier__list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.tier__list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.55rem;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.tier__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.55rem;
+  height: 0.3rem;
+  border-left: 2px solid var(--blue-grey-deep);
+  border-bottom: 2px solid var(--blue-grey-deep);
+  transform: rotate(-45deg);
+}
+.managed__note {
+  text-align: center;
+  margin: 2rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   Readiness Assessment
+   -------------------------------------------------------------------------- */
+#assessment .card__tag { display: block; }
+.assessment__alt {
+  margin: 1.1rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.assessment__alt a { color: var(--blue-grey-deep); font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   Leadership / about
+   -------------------------------------------------------------------------- */
+.leadership {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.leadership__photo {
+  flex: 0 0 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius);
+  background: var(--tint);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.leadership__body { flex: 1; }
+.leadership__body .card__title { margin-bottom: 0.6rem; }
+
 /* --------------------------------------------------------------------------
    Contact
    -------------------------------------------------------------------------- */
 .section--contact { background: var(--off-white); border-top: 1px solid var(--line); }
 .section--contact .section__lead { margin-bottom: 2rem; }
+/* Ghost button sits on a light background here, so darken it for contrast */
+.section--contact .btn--ghost {
+  color: var(--ink);
+  border-color: rgba(28, 39, 44, 0.25);
+}
+.section--contact .btn--ghost:hover { background: rgba(28, 39, 44, 0.06); }
 
 /* --------------------------------------------------------------------------
    Footer
@@ -332,6 +432,19 @@ button:focus-visible,
 }
 .footer__logo { height: 24px; width: auto; opacity: 0.9; }
 .footer__meta { margin: 0; font-size: 0.92rem; }
+
+/* Trust signals for regulated procurement */
+.footer__trust {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  font-size: 0.82rem;
+  color: rgba(246, 246, 246, 0.6);
+  line-height: 1.6;
+}
 
 /* --------------------------------------------------------------------------
    Responsive
@@ -366,7 +479,10 @@ button:focus-visible,
   .hero__inner { padding: 4rem 1.5rem 4.5rem; }
   .section { padding: 3.5rem 0; }
 
+  .leadership { flex-direction: column; align-items: center; text-align: center; }
+
   .footer__inner { flex-direction: column; text-align: center; }
+  .footer__trust { justify-content: center; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
