@@ -330,6 +330,16 @@ button:focus-visible,
 .card__title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem; }
 .card__body { color: var(--ink-soft); font-size: 1rem; margin: 0; }
 
+.card__link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  color: var(--blue-grey-deep);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.card__link:hover { text-decoration: underline; }
+
 /* Recommended tier: same accent treatment as the feature card */
 .card--recommended { border-top: 4px solid var(--blue-grey-deep); }
 
