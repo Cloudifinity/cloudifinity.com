@@ -196,10 +196,21 @@ button:focus-visible,
   margin-top: 2.4rem;
 }
 .hero__path {
+  display: block;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(246, 246, 246, 0.18);
   border-radius: var(--radius);
   padding: 1.6rem 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease,
+    border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.hero__path:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--blue-grey);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
 }
 .hero__path-title {
   font-size: 1.2rem;
@@ -213,12 +224,13 @@ button:focus-visible,
   margin: 0 0 1rem;
 }
 .hero__path-link {
+  display: inline-block;
   font-weight: 600;
   font-size: 0.98rem;
-  text-decoration: none;
   color: var(--blue-grey);
+  transition: color 0.15s ease, transform 0.15s ease;
 }
-.hero__path-link:hover { color: var(--white); text-decoration: underline; }
+.hero__path:hover .hero__path-link { color: var(--white); transform: translateX(3px); }
 
 /* Compliance chips under the hero CTA */
 .hero__chips {
