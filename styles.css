@@ -419,33 +419,6 @@ button:focus-visible,
 .assessment__alt a { color: var(--blue-grey-deep); font-weight: 600; }
 
 /* --------------------------------------------------------------------------
-   Leadership / about
-   -------------------------------------------------------------------------- */
-.leadership {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  margin-top: 2rem;
-}
-.leadership__photo {
-  flex: 0 0 150px;
-  width: 150px;
-  height: 150px;
-  border-radius: var(--radius);
-  background: var(--tint);
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ink-soft);
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.leadership__body { flex: 1; }
-.leadership__body .card__title { margin-bottom: 0.6rem; }
-
-/* --------------------------------------------------------------------------
    Contact
    -------------------------------------------------------------------------- */
 .section--contact { background: var(--off-white); border-top: 1px solid var(--line); }
@@ -522,8 +495,6 @@ button:focus-visible,
 
   .hero__inner { padding: 4rem 1.5rem 4.5rem; }
   .section { padding: 3.5rem 0; }
-
-  .leadership { flex-direction: column; align-items: center; text-align: center; }
 
   .footer__inner { flex-direction: column; text-align: center; }
   .footer__trust { justify-content: center; text-align: center; }
