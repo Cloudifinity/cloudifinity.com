@@ -188,6 +188,38 @@ button:focus-visible,
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 .hero__actions--center { justify-content: center; }
 
+/* Dual-path hero: two audience doors (regulated AI / venue networks) */
+.hero__paths {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+.hero__path {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(246, 246, 246, 0.18);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.5rem;
+}
+.hero__path-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--white);
+}
+.hero__path p {
+  color: rgba(246, 246, 246, 0.8);
+  font-size: 0.98rem;
+  margin: 0 0 1rem;
+}
+.hero__path-link {
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-decoration: none;
+  color: var(--blue-grey);
+}
+.hero__path-link:hover { color: var(--white); text-decoration: underline; }
+
 /* Compliance chips under the hero CTA */
 .hero__chips {
   list-style: none;
@@ -485,6 +517,8 @@ button:focus-visible,
 
   .cards,
   .cards--three { grid-template-columns: 1fr; }
+
+  .hero__paths { grid-template-columns: 1fr; }
 
   .hero__inner { padding: 4rem 1.5rem 4.5rem; }
   .section { padding: 3.5rem 0; }
