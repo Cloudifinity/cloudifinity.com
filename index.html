@@ -36,30 +36,28 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#assessment">Assessment</a></li>
-        <li><a href="#managed">Managed</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="nav__cta">Get in touch</a></li>
+        <li><a href="ai-regulated/">Secure AI</a></li>
+        <li><a href="venues/">Venues</a></li>
+        <li><a href="mailto:hello@cloudifinity.com" class="nav__cta">Get in touch</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
 
-    <!-- Hero -->
+    <!-- Splitter: route each audience to its own side -->
     <section class="hero">
       <div class="hero__inner container">
         <p class="hero__eyebrow">Cloudifinity</p>
         <h1 class="hero__title">Infrastructure that just works.</h1>
         <p class="hero__subtitle">
-          Two things we do properly: secure, sovereign AI infrastructure for
-          regulated business, and reliable on-site networks for the venues and
-          spaces that depend on them. Both built to the same standard, by the
-          same practice.
+          An independent, founder-led infrastructure practice. We do two things
+          properly: secure, sovereign AI infrastructure for regulated business,
+          and reliable on-site networks for venues and the spaces that depend on
+          them. Which one brings you here?
         </p>
         <div class="hero__paths">
-          <a class="hero__path" href="#services">
+          <a class="hero__path" href="ai-regulated/">
             <h2 class="hero__path-title">Secure AI for regulated business</h2>
             <p>
               Self-hosted AI inference on sensitive data, where it has to stay.
@@ -76,216 +74,6 @@
             </p>
             <span class="hero__path-link">Explore venue networks &rarr;</span>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section section--tint" id="services">
-      <div class="container">
-        <h2 class="section__title section__title--center">What we do</h2>
-        <p class="section__lead">
-          Secure AI infrastructure is our core, financial services first. We
-          design, build and run self-hosted artificial intelligence (AI)
-          inference on sensitive data, kept where it has to stay and integrated
-          securely with the cloud, built for
-          the Digital Operational Resilience Act (DORA), already in force, and
-          the EU Artificial Intelligence Act (EU AI Act) high-risk obligations
-          applying from 2 August 2026. Everything else we do, the cloud, the
-          networks and the managed support, exists to make that inference run
-          safely and where it has to stay.
-        </p>
-
-        <article class="card card--feature">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
-          </div>
-          <p class="card__tag">Our core specialism</p>
-          <h3 class="card__title">Secure, sovereign AI infrastructure</h3>
-          <p class="card__body">
-            Self-hosted AI inference on your most sensitive data, running where
-            it has to stay and integrated securely with the cloud. We build to
-            sovereignty, data-in-use protection and audit-readiness as design
-            principles, so what you put in front of a regulator stands up. The
-            rare combination here is one practice with deep cloud and security
-            alongside real networking and hardware experience, which is exactly
-            what self-hosted inference demands.
-            <!-- TODO: harden confidential-computing / attestation / TEE claims here once that work is delivered. Keep current wording at "design principle" level until then. -->
-          </p>
-        </article>
-
-        <div class="cards cards--three">
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.6-1.5A3.75 3.75 0 0 1 18 18H7Z"/></svg>
-            </div>
-            <h3 class="card__title">Cloud &amp; AWS platforms</h3>
-            <p class="card__body">
-              Architecture, migrations and platform builds on Amazon Web Services
-              (AWS). Infrastructure as code with Terraform, container platforms
-              with Kubernetes and Elastic Kubernetes Service (EKS), and the secure
-              cloud side of a hybrid inference setup.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><path d="M9 6h6M6 9v6M18 9v6M9 18h6"/></svg>
-            </div>
-            <h3 class="card__title">Networks &amp; on-site</h3>
-            <p class="card__body">
-              The on-premises foundation inference actually runs on. Networking,
-              structured connectivity and hardware designed, installed and
-              configured to be fast, resilient and easy to live with.
-            </p>
-            <a class="card__link" href="venues/">On-site networks for venues &amp; events &rarr;</a>
-          </article>
-
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg>
-            </div>
-            <h3 class="card__title">Managed &amp; observability</h3>
-            <p class="card__body">
-              We keep it running, compliant and audit-ready. Monitoring,
-              observability and run-and-maintain support, with problems spotted
-              before they reach you. Detailed in the managed tiers below.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Readiness Assessment: the productised front door -->
-    <section class="section section--tint" id="assessment">
-      <div class="container section__narrow section__narrow--center">
-        <p class="card__tag">Start here</p>
-        <h2 class="section__title section__title--center">Secure AI Infrastructure Readiness Assessment</h2>
-        <p class="section__lead">
-          A fixed-scope, fixed-price first step, so you are not signing up to an
-          open-ended project to find out where you stand. We review your data,
-          your obligations and your current setup, then hand you a written
-          findings report and a roadmap mapped to your DORA and EU AI Act
-          obligations, sovereignty requirements and audit needs. It is the
-          natural front door to the build and the managed tiers that follow.
-        </p>
-        <!-- TODO: BOOKING_URL — replace href below with the Cal.com/Calendly link. Falls back to mailto for now. -->
-        <div class="hero__actions hero__actions--center">
-          <a class="btn btn--primary btn--lg" href="mailto:hello@cloudifinity.com?subject=Readiness%20Assessment">Book a readiness call</a>
-        </div>
-        <p class="assessment__alt">
-          Prefer email? <a href="mailto:hello@cloudifinity.com">hello@cloudifinity.com</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Managed services: the ongoing relationship -->
-    <section class="section" id="managed">
-      <div class="container">
-        <h2 class="section__title section__title--center">Managed, and kept audit-ready</h2>
-        <p class="section__lead">
-          The natural continuation of a build. Each tier pairs automation we
-          build once with one recurring, human-checked deliverable, framed around
-          staying compliant, attested and audit-ready, not just keeping servers
-          up. Support is 9 to 5, Monday to Friday by design, because the
-          infrastructure is engineered not to need out-of-hours intervention.
-        </p>
-
-        <div class="cards cards--three">
-          <article class="card">
-            <h3 class="card__title">Tier 1 &mdash; Operational</h3>
-            <p class="card__body">Keeping it healthy and current.</p>
-            <ul class="tier__list">
-              <li>Monitoring and observability</li>
-              <li>Patching and security updates</li>
-              <li>9 to 5, Mon&ndash;Fri support</li>
-              <li>Monthly health report</li>
-            </ul>
-          </article>
-
-          <article class="card card--recommended">
-            <p class="card__tag">Recommended</p>
-            <h3 class="card__title">Tier 2 &mdash; Assured</h3>
-            <p class="card__body">Everything in Operational, plus continuous compliance.</p>
-            <ul class="tier__list">
-              <li>Everything in Tier 1</li>
-              <li>Continuous DORA / EU AI Act audit-trail maintenance</li>
-              <li>Attestation health monitoring</li>
-              <li>Quarterly compliance evidence pack, written for your auditors</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Tier 3 &mdash; Resilient</h3>
-            <p class="card__body">Everything in Assured, plus proven resilience.</p>
-            <ul class="tier__list">
-              <li>Everything in Tier 2</li>
-              <li>Scheduled resilience / disaster recovery (DR) testing, doubling as DORA Article 11 evidence</li>
-              <li>Supply-chain monitoring of the inference stack</li>
-              <li>Priority response and capacity planning</li>
-              <li>Incident-response retainer</li>
-            </ul>
-          </article>
-        </div>
-
-        <!-- TODO: PRICING_DISPLAY — add "from £X/mo" per tier here if you later want public numbers. Default is descriptive only. -->
-        <p class="managed__note">Pricing on application.</p>
-      </div>
-    </section>
-
-    <!-- Proof / case study -->
-    <section class="section section--tint" id="proof">
-      <div class="container section__narrow">
-        <h2 class="section__title">Proof</h2>
-        <article class="card card--feature">
-          <p class="card__tag">Anonymised engagement</p>
-          <!-- TODO: CASE_STUDY_TEXT — replace the placeholder below with a real anonymised engagement and a concrete, measurable outcome. Keep it attributed to Cloudifinity, not to an individual. -->
-          <p class="card__body">
-            A regulated financial services client needed to run AI inference on
-            sensitive data that could not leave their environment. Cloudifinity
-            designed and built a self-hosted inference platform kept under their
-            control, integrated securely with their existing cloud, with the
-            audit trail their compliance team needed. [PLACEHOLDER: add the
-            concrete outcome, for example time-to-deploy, cost saved, audit
-            milestone passed, or obligation evidenced.]
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container section__narrow">
-        <h2 class="section__title">About Cloudifinity</h2>
-        <p>
-          Cloudifinity Ltd is an independent, founder-led infrastructure practice,
-          built on decades of hands-on experience in technology across cloud,
-          security, networking and the hardware underneath. We are senior-led,
-          security-first and regulated-grade as standard, direct and accountable
-          in how we work.
-        </p>
-        <p>
-          That combination, serious cloud and security engineering alongside real
-          networking and hardware experience, is exactly what secure, self-hosted
-          inference demands, and it is the foundation the practice is built on.
-        </p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section section--contact" id="contact">
-      <div class="container section__narrow section__narrow--center">
-        <h2 class="section__title section__title--center">Let's talk</h2>
-        <p class="section__lead">
-          Facing a DORA or EU AI Act deadline, or weighing whether AI can run on
-          data that cannot leave your walls? Tell us what you are trying to do and
-          we will tell you honestly how we can help. The Readiness Assessment is
-          usually the right place to start.
-        </p>
-        <!-- TODO: BOOKING_URL — replace href on the primary CTA with the Cal.com/Calendly link. Falls back to mailto for now. -->
-        <div class="hero__actions hero__actions--center">
-          <a class="btn btn--primary btn--lg" href="mailto:hello@cloudifinity.com?subject=Readiness%20Assessment">Book a call</a>
-          <a class="btn btn--ghost" href="mailto:hello@cloudifinity.com">hello@cloudifinity.com</a>
         </div>
       </div>
     </section>
