@@ -312,13 +312,20 @@
     // success message. Without JS the form still posts natively and works.
     var form = document.querySelector('.contact-form');
     if (form) {
-      var status = form.querySelector('.form__status');
+      // Note: do not name this "status" — a global "var status" aliases the
+      // special window.status property, which coerces to a string and silently
+      // discards the element, so no messages would ever show.
+      var statusEl = form.querySelector('.form__status');
+      var showError = function (msg) {
+        statusEl.className = 'form__status is-error';
+        statusEl.textContent = msg || 'Something went wrong. Please email hello@cloudifinity.com.';
+      };
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var submitBtn = form.querySelector('button[type="submit"]');
         submitBtn.disabled = true;
-        status.className = 'form__status is-sending';
-        status.textContent = 'Sending...';
+        statusEl.className = 'form__status is-sending';
+        statusEl.textContent = 'Sending...';
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
@@ -328,23 +335,19 @@
             return res.json().then(function (json) { return { ok: res.ok, json: json }; });
           })
           .then(function (r) {
-            if (r.ok) {
+            if (r.ok && r.json && r.json.success) {
               form.reset();
               // Swap the form out for a clear confirmation panel
               form.hidden = true;
+              statusEl.textContent = '';
               var success = document.querySelector('.form-success');
               success.hidden = false;
               success.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
-              status.className = 'form__status is-error';
-              status.textContent = (r.json && r.json.message) ? r.json.message
-                : 'Something went wrong. Please email hello@cloudifinity.com.';
+              showError(r.json && r.json.message);
             }
           })
-          .catch(function () {
-            status.className = 'form__status is-error';
-            status.textContent = 'Something went wrong. Please email hello@cloudifinity.com.';
-          })
+          .catch(function () { showError(); })
           .then(function () { submitBtn.disabled = false; });
       });
     }
