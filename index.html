@@ -24,6 +24,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data: helps search engines understand the business, its
+       location, services and the Pavilions Teignmouth reference. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://cloudifinity.com/#business",
+    "name": "Cloudifinity Ltd",
+    "alternateName": "Cloudifinity",
+    "url": "https://cloudifinity.com/",
+    "logo": "https://cloudifinity.com/assets/logo.svg",
+    "image": "https://cloudifinity.com/assets/og-image.png",
+    "description": "Independent, founder-led infrastructure practice. Cloud, on-premises and network infrastructure that just works: AWS platforms, servers and systems, networks, WiFi and connectivity. With venues and events a specialism.",
+    "email": "hello@cloudifinity.com",
+    "telephone": "+44 1626 798121",
+    "founder": {
+      "@type": "Person",
+      "name": "Ben Kelly"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Devon",
+      "addressCountry": "GB"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "South West England"
+    },
+    "knowsAbout": [
+      "Amazon Web Services (AWS)",
+      "Cloud infrastructure",
+      "On-premises servers and systems",
+      "Networks and WiFi",
+      "Infrastructure monitoring",
+      "Venue and event infrastructure"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Infrastructure services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud & AWS platforms" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servers, on-prem & networks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Monitoring & managed support" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Venue & event infrastructure" } }
+      ]
+    },
+    "review": {
+      "@type": "Review",
+      "reviewBody": "It is like a weight has been lifted. The service is reliable, and Ben and the team are always happy to help.",
+      "author": { "@type": "Person", "name": "Nikki" },
+      "publisher": { "@type": "Organization", "name": "Pavilions Teignmouth" }
+    }
+  }
+  </script>
 </head>
 <body>
 

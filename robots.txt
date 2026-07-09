@@ -1,0 +1,5 @@
+# Cloudifinity Ltd - allow everything, point crawlers at the sitemap
+User-agent: *
+Allow: /
+
+Sitemap: https://cloudifinity.com/sitemap.xml
