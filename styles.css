@@ -516,6 +516,38 @@ button:focus-visible,
 .form__status.is-success { color: #1f7a4d; }
 .form__status.is-error { color: #b3261e; }
 .form__status.is-sending { color: var(--ink-soft); }
+/* Confirmation panel shown after a successful submit */
+.form-success {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 2.4rem 2rem;
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.form-success__icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(31, 122, 77, 0.12);
+  color: #1f7a4d;
+}
+.form-success__icon svg { width: 32px; height: 32px; }
+.form-success__title { font-size: 1.35rem; font-weight: 700; margin: 0 0 0.5rem; }
+.form-success__text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+.form-success__text a { color: var(--blue-grey-deep); font-weight: 600; }
+
 .contact-alt {
   margin: 1.6rem 0 0;
   font-size: 0.95rem;
