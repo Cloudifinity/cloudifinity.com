@@ -379,6 +379,26 @@ button:focus-visible,
 .card__title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem; }
 .card__body { color: var(--ink-soft); font-size: 1rem; margin: 0; }
 
+/* Testimonial pull-quote, e.g. inside the Pavilions proof card. */
+.quote {
+  margin: 1.6rem 0 0;
+  padding: 1.2rem 0 0.2rem 1.4rem;
+  border-left: 4px solid var(--blue-grey);
+}
+.quote__text {
+  margin: 0 0 0.7rem;
+  font-size: 1.18rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--ink);
+}
+.quote__cite {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--blue-grey-deep);
+}
+
 .card__link {
   display: inline-block;
   margin-top: 0.9rem;
@@ -446,6 +466,66 @@ button:focus-visible,
   border-color: rgba(28, 39, 44, 0.25);
 }
 .section--contact .btn--ghost:hover { background: rgba(28, 39, 44, 0.06); }
+
+/* Contact form */
+.contact-form {
+  text-align: left;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.form__row {
+  display: flex;
+  gap: 1rem;
+}
+.form__row .form__field { flex: 1; }
+.form__field { margin-bottom: 1.1rem; }
+.form__field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.form__field input,
+.form__field select,
+.form__field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.form__field textarea { resize: vertical; }
+.form__field input:focus,
+.form__field select:focus,
+.form__field textarea:focus {
+  outline: none;
+  border-color: var(--blue-grey-deep);
+  box-shadow: 0 0 0 3px rgba(111, 147, 164, 0.2);
+}
+.contact-form .btn { margin-top: 0.4rem; }
+.form__status {
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.form__status:empty { display: none; }
+.form__status.is-success { color: #1f7a4d; }
+.form__status.is-error { color: #b3261e; }
+.form__status.is-sending { color: var(--ink-soft); }
+.contact-alt {
+  margin: 1.6rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.contact-alt a { color: var(--blue-grey-deep); font-weight: 600; }
+
+@media (max-width: 560px) {
+  .form__row { flex-direction: column; gap: 0; }
+}
 
 /* --------------------------------------------------------------------------
    Footer
