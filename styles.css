@@ -445,6 +445,32 @@ button:focus-visible,
 }
 
 /* --------------------------------------------------------------------------
+   Health check: fixed-price entry offer
+   -------------------------------------------------------------------------- */
+/* The id keeps this ahead of the generic `.section p` colour/size rules */
+#healthcheck .healthcheck__price {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 1.6rem 0 0.6rem;
+  color: var(--ink);
+}
+.healthcheck__price span {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink-soft);
+  margin-left: 0.3rem;
+}
+/* Primary button sits on a light background here, same as the contact section */
+#healthcheck .btn--primary {
+  background: var(--ink);
+  color: var(--off-white);
+  margin-top: 0.4rem;
+}
+#healthcheck .btn--primary:hover { background: var(--hero-dark-2); }
+
+/* --------------------------------------------------------------------------
    Readiness Assessment
    -------------------------------------------------------------------------- */
 #assessment .card__tag { display: block; }
